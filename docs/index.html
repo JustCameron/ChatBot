@@ -1,8 +1,235 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<p>This is text</p>
+	<u>Simple Commands</u>
+	<p>Commands which require one or no additional basic parameters to output a simple message or piece of info.</p>
+	<ul>
+		<li>
+			<div class="command">
+				<span class="commandTitle">Hooray</span>, <span class="commandExtra">"Commit mass celebrations"</span></br>
+				Usage: !hooray
+			</div>
+		</li>
+		<li>
+			<div class="command">
+				<span class="commandTitle">ILoveYou</span>, <span class="commandExtra">"Show your love <3"</span></br>
+				Usage: !iloveyou [@user]<br/>
+				Parameters:
+				<ul>
+					<li>
+					[@user] --> A user mention
+					</li>
+				</ul>
+				Examples: !iloveyou @ChatBot<br/>
+			</div>
+		</li>
+		<li>
+			<div class="command">
+				<span class="commandTitle">RaiseThem</span>, <span class="commandExtra">"Raise your what?!"</span></br>
+				Usage: !hooray<br/>
+			</div>
+		</li>
+		<li>
+			<div class="command">
+				<span class="commandTitle">Sorry</span>, <span class="commandExtra">"It's too late to apologise..."</span></br>
+				Usage: !sorry<br/>
+			</div>
+		</li>
+		<li>
+			<div class="command">
+				<span class="commandTitle">Ping</span>, <span class="commandExtra">"Ping the pong"</span></br>
+				Usage: !ping<br/>
+			</div>
+		</li>
+		<li>
+			<div class="command">
+				<span class="commandTitle">Pong</span>, <span class="commandExtra">"pong the Ping"</span></br>
+				Usage: !pong<br/>
+			</div>
+		</li>
+		<li>
+			<div class="command">
+				<span class="commandTitle">Amore</span>, <span class="commandExtra">"tHat'S AmOrE"</span></br>
+				Usage: !amore<br/>
+			</div>
+		</li>
+	</ul>
+
+	<u>Informational Commands</u>
+	<p>Commands which might require a few parameters to give back useful information.</p>
+	<ul>
+		<li>
+			<div class="command">
+				<span class="commandTitle">Help</span>, <span class="commandExtra">"Assistance required in aisle 4!</span></br>
+				Usage: !help<br/>
+			</div>
+		</li>
+		<li>
+			<div class="command">
+				<span class="commandTitle">Test</span>, <span class="commandExtra">"Testing, testing! 1, 2, 3!"</span></br>
+				Usage: !test<br/>
+			</div>
+		</li>
+		<li>
+			<span class="commandTitle">Todo</span>
+			<ul>
+				<li>
+					<div class="command">
+						<span class="commandTitle">&lt;Default&gt;</span>, <span class="commandExtra">"What do we have here..?"</span></br>
+						<div class="commandDesc">~~Displays the current state of the Todo list.</div>
+						Usage: !todo<br/>
+					</div>
+				</li>
+				<li>
+					<div class="command">
+						<span class="commandTitle">Add</span>, <span class="commandExtra">"We've got another one over here, Carl!"</span></br>
+						<div class="commandDesc">~~Adds an item to the Todo list.</div>
+						Usage: !todo add [todo item]<br/>
+						Parameters:<br/>
+						<ul>
+							<li>[todo item] --> String of text depicting what is to be done</li>
+						</ul>
+						Examples: !todo add Make this page look bloody beautiful!<br/>
+					</div>
+				</li>
+				<li>
+					<div class="command">
+						<span class="commandTitle">Edit</span>, <span class="commandExtra">"Nah, this is wrong."</span></br>
+						<div class="commandDesc">~~Edits an item on the Todo list.</div>
+						Usage: !todo add [todo item index] [new item text]<br/>
+						Parameters:<br/>
+						<ul>
+							<li>[todo item index] --> Index of the Todo item on the Todo list</li>
+							<li>[new item text] --> New text to be used for the Todo item</li>
+						</ul>
+						Examples: !todo edit 3 Fix this one<br/>
+					</div>
+				</li>
+				<li>
+					<div class="command">
+						<span class="commandTitle">Remove</span>, <span class="commandExtra">"KILL IT WITH FIRE!!"</i></span></br>
+						<div class="commandDesc">~~Removes an item from the Todo list.</div>
+						Usage: !todo add [todo item index]<br/>
+						Parameters:<br/>
+						<ul>
+							<li>[todo item index] --> Index of the Todo item on the Todo list</li>
+						</ul>
+						Examples: !todo remove 5<br/>
+					</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+
+
+	<u>Complex Commands</u><br/>
+	<p>Commands perform complex operations requiring precise parameters to be utilised properly.</p>
+	<ul>
+		<li>
+			<div class="command">
+				<span class="commandTitle">Roll</span>, <span class="commandDesc">"Roll some dice or something idk"</span></br>
+				<div class="commandDesc">~~Rolls some dice given an input string and outputs the results.</div>
+				Usage: !roll [roll request string]<br/>
+				Parameters:<br/>
+				<ul>
+					<li>[roll request string] --> {number}{dice type} OR {number} (use + or - to add more dice)</li>
+					<li>{number} --> Any positive integer
+					<li>{dice type} --> any positive integer preceeded by "d" e.g. d4, d6, d10</li>
+				</ul>
+				Examples:<br/>
+				<ul>
+					<li>!roll d4 >> Rolls one 4-sided die</li>
+					<li>!roll 5d6 >> Rolls five 6-sided dice</li>
+					<li>!roll 3d8 + 4 >> Rolls three 8-sided dice and adds a constant value of 4</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+	<u>DnD Commands</u>
+	<ul>
+		<li>
+			<span class="commandTitle">DnD</span>
+			<ul>
+				<li>
+					<div class="command">
+						<span class="commandTitle">Spell</span>, <span class="commandDesc">"Cast some magic"</span></br>
+						<div class="commandDesc">~~Get the details of a given Dnd 5e spell.</div>
+						Usage: !dnd spell [spell name]<br/>
+						Parameters:<br/>
+						<ul>
+							<li>[spell name] --> Name of the spell you want to view</li>
+						</ul>
+						Examples:<br/>
+						<ul>
+							<li>!dnd spell fireball</li>
+							<li>!dnd spell magic missile</li>
+						</ul>					
+					</div>
+				</li>
+				<li>
+					<span class="commandTitle">CustomSpell</span>
+					<ul>
+						<li>
+							<div class="command">
+								<span class="commandTitle">Create</span>, <span class="commandDesc">"Create some custom magic!"</span></br>
+								<div class="commandDesc">~~Being the process of creating a custom DnD spell.</div>
+								Usage: !dnd customspell create<br/>
+							</div>
+						</li>
+						<li>
+							<div class="command">
+								<span class="commandTitle">Cancel</span>, <span class="commandDesc">"Cancel some custom magic!"</span></br>
+								<div class="commandDesc">~~Cancel the process of making a custom DnD spell.</div>
+								Usage: !dnd customspell cancel<br/>
+							</div>
+						</li>
+						<li>
+							<div class="command">
+								<span class="commandTitle">Edit</span>, <span class="commandDesc">"Edit some custom magic!"</span></br>
+								<div class="commandDesc">~~Edits an attribute of custom DnD spell.</div>
+								Usage: !dnd customspell edit [spell name]<br/>
+								Parameters:<br/>
+								<ul>
+									<li>[spell name] --> Name of the spell you want to edit</li>
+								</ul>
+								Examples:<br/>
+								<ul>
+									<li>!dnd customspell edit 1H-KO Spell</li>
+									<li>!dnd customspell delete full party heal</li>
+								</ul>	
+							</div>
+						</li>
+						<li>
+							<div class="command">
+								<span class="commandTitle">Delete</span>, <span class="commandDesc">"Delete some custom magic!"</span></br>
+								<div class="commandDesc">~~Delete a custom DnD spell.</div>
+								Usage: !dnd customspell delete [spell name]<br/>
+								Parameters:<br/>
+								<ul>
+									<li>[spell name] --> Name of the spell you want to delete</li>
+								</ul>
+								Examples:<br/>
+								<ul>
+									<li>!dnd customspell delete loud spell of noise</li>
+									<li>!dnd customspell delete magical dust</li>
+								</ul>	
+							</div>
+						</li>
+						<li>
+							<div class="command">
+								<span class="commandTitle">View</span>, <span class="commandDesc">"View some custom magic!"</span></br>
+								<div class="commandDesc">~~View all of the custom DnD spells.</div>
+								Usage: !dnd customspell create<br/>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
 </body>
 </html>
